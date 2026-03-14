@@ -8,10 +8,8 @@ I focus on building **production-grade systems** for factories including Machine
 
 Interested in:
 
-- Automation Engineering
-- Industrial Automation
+- Industrial Automation Engineering
 - ERPs
-- Robotics and Machines
 - LLM Applications
 - Distributed Systems  
 
