@@ -1,6 +1,6 @@
 # Hi, I'm Monis. 👋
 
-**Automation Engineer · Python Backend · Industrial Automation **
+**Automation Engineer · Python Backend · Industrial Automation**
 
 ## 👩‍💻 About Me
 
