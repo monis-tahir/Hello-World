@@ -2,11 +2,13 @@
 
 **Automation Engineer · Python Backend · Industrial Automation**
 
+---
+
 ## 👩‍💻 About Me
 
 I focus on building **production-grade systems** for factories including Machine design and automation, PLC Programming, HMIs, Machine metrics, ERPs, APIs, Data pipelines, LLM integrations and Web applications.
 
-Interested in:
+### Interested in:
 
 - Industrial Automation Engineering
 - ERPs
@@ -16,16 +18,16 @@ Interested in:
 Always building. Always learning.
 
 ---
-'''
+
 ## 🛠 What I Build
 
-### AI Systems
+### 🤖 AI Systems
 - RAG pipelines  
 - LLM APIs  
 - CrewAI agents and Crews  
 - Vector search systems  
 
-### Python Backend with Databases
+### 🐍 Python Backend with Databases
 - FastAPI  
 - Flask    
 - Async systems  
@@ -34,15 +36,14 @@ Always building. Always learning.
 - PostgreSQL
 - SQLite
 
-### Industrial Automation
+### 🏭 Industrial Automation
 - PLC Programming
 - SCADA Visualization
 - Field Instrumentation
 - Panel Design and Control
 - AutoCAD/FreeCAD
 
-### Cloud & Infrastructure 
+### ☁️ Cloud & Infrastructure 
 - Docker  
 - CI/CD pipelines  
 - Google Cloud Platform (GCP)
-'''
