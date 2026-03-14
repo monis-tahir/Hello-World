@@ -16,7 +16,7 @@ Interested in:
 Always building. Always learning.
 
 ---
-'''''
+'''
 ## 🛠 What I Build
 
 ### AI Systems
@@ -45,4 +45,4 @@ Always building. Always learning.
 - Docker  
 - CI/CD pipelines  
 - Google Cloud Platform (GCP)
-'''''
+'''
