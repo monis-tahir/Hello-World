@@ -1,0 +1,379 @@
+:root {
+  --ink: #0e0e0d;
+  --paper: #f5f0e8;
+  --accent: #c8401a;
+  --muted: #7a7065;
+  --line: #d4cdc2;
+  --highlight: #e8dfc8;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'DM Mono', monospace;
+  font-size: 13px;
+  line-height: 1.7;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Grain overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1000;
+  opacity: 0.6;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* ── HEADER ── */
+header {
+  padding: 72px 0 48px;
+  border-bottom: 1px solid var(--line);
+  position: relative;
+}
+
+.header-inner {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 40px;
+  align-items: end;
+}
+
+.name-block {
+  position: relative;
+}
+
+.name-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+  opacity: 0;
+  animation: fadeUp 0.6s 0.1s forwards;
+}
+
+h1 {
+  font-family: 'Instrument Serif', serif;
+  font-size: clamp(52px, 7vw, 80px);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+  opacity: 0;
+  animation: fadeUp 0.7s 0.2s forwards;
+}
+
+h1 em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.title-tag {
+  font-family: 'Syne', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 16px;
+  opacity: 0;
+  animation: fadeUp 0.7s 0.35s forwards;
+}
+
+.header-meta {
+  text-align: right;
+  opacity: 0;
+  animation: fadeUp 0.7s 0.4s forwards;
+}
+
+.header-meta a {
+  display: block;
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  line-height: 2;
+  transition: color 0.2s;
+}
+
+.header-meta a:hover { color: var(--accent); }
+
+.header-meta .github-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 12px;
+  padding: 8px 14px;
+  border: 1px solid var(--ink);
+  font-family: 'Syne', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: all 0.2s;
+}
+
+.header-meta .github-link:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+/* ── SECTION LAYOUT ── */
+section {
+  padding: 56px 0;
+  border-bottom: 1px solid var(--line);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-header {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.section-num {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  padding-top: 4px;
+}
+
+.section-title {
+  font-family: 'Instrument Serif', serif;
+  font-size: 36px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+
+/* ── EXPERIENCE ── */
+.exp-grid {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 40px;
+}
+
+.exp-entry {
+  display: contents;
+}
+
+.exp-date {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--muted);
+  line-height: 1.5;
+  padding-top: 4px;
+  letter-spacing: 0.04em;
+}
+
+.exp-content {
+  padding-bottom: 40px;
+  border-top: 1px solid var(--line);
+  padding-top: 0;
+}
+
+.exp-entry:first-child .exp-content,
+.exp-entry:first-child .exp-date {
+  border-top: none;
+  padding-top: 0;
+}
+
+.exp-role {
+  font-family: 'Syne', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+  padding-top: 0;
+}
+
+.exp-co {
+  font-family: 'Instrument Serif', serif;
+  font-size: 20px;
+  color: var(--ink);
+  margin-bottom: 12px;
+  font-style: italic;
+}
+
+.exp-co span {
+  font-style: normal;
+  font-size: 11px;
+  font-family: 'DM Mono', monospace;
+  color: var(--muted);
+  margin-left: 8px;
+}
+
+.exp-bullets {
+  list-style: none;
+  padding: 0;
+}
+
+.exp-bullets li {
+  padding-left: 16px;
+  position: relative;
+  color: #3a3530;
+  margin-bottom: 6px;
+  font-size: 12px;
+}
+
+.exp-bullets li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: 10px;
+  top: 2px;
+}
+
+/* ── SKILLS ── */
+.skills-wrap {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 40px;
+}
+
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  padding: 6px 14px;
+  border: 1px solid var(--line);
+  background: transparent;
+  letter-spacing: 0.04em;
+  transition: all 0.2s;
+  cursor: default;
+}
+
+.tag:hover {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+
+/* ── EDUCATION ── */
+.edu-grid {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 40px;
+}
+
+.edu-entry {
+  display: contents;
+}
+
+.edu-year {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--muted);
+  padding-top: 4px;
+}
+
+.edu-content {
+  padding-bottom: 28px;
+}
+
+.edu-degree {
+  font-family: 'Instrument Serif', serif;
+  font-size: 22px;
+  font-style: italic;
+  margin-bottom: 4px;
+}
+
+.edu-school {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+
+/* ── FOOTER ── */
+footer {
+  padding: 40px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-name {
+  font-family: 'Instrument Serif', serif;
+  font-size: 20px;
+  font-style: italic;
+}
+
+.footer-copy {
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* decorative line number column */
+.ruled {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 48px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 80px;
+  gap: 28px;
+  pointer-events: none;
+  opacity: 0.15;
+}
+
+.ruled span {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  color: var(--muted);
+  writing-mode: vertical-rl;
+  letter-spacing: 0.08em;
+}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 640px) {
+  .header-inner { grid-template-columns: 1fr; }
+  .header-meta { text-align: left; }
+  .section-header,
+  .exp-grid,
+  .skills-wrap,
+  .edu-grid { grid-template-columns: 1fr; gap: 8px; }
+  .exp-date, .edu-year, .section-num { display: inline-block; margin-bottom: 4px; }
+  .ruled { display: none; }
+}
