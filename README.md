@@ -1,31 +1,25 @@
 # Hi, I'm Monis. 👋
 
-**Automation Engineer · Python Backend · Industrial Automation**
+**Fullstack Engineer · Python · Javascript · Industrial Automation**
 
 ---
 
 ## 👩‍💻 About Me
 
-I focus on building **production-grade systems** for factories including Machine design and automation, PLC Programming, HMIs, Machine metrics, ERPs, APIs, Data pipelines, LLM integrations and Web applications.
+I focus on building **production-grade systems** for factories including Machine design and automation, PLC Programming, HMIs, Machine metrics, ERPs, APIs and Data pipelines.
 
 ### Interested in:
 
 - Industrial Automation Engineering
 - ERPs
-- LLM Applications
-- Distributed Systems  
+- Fullstack Development
+- Distributed Systems and Data Heavy Systems. 
 
 Always building. Always learning.
 
 ---
 
-## 🛠 What I Build
-
-### 🤖 AI Systems
-- RAG pipelines  
-- LLM APIs  
-- CrewAI agents and Crews  
-- Vector search systems  
+## 🛠 What I Build 
 
 ### 🐍 Python Backend with Databases
 - FastAPI  
