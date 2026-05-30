@@ -1,6 +1,6 @@
 # Hi, I'm Monis. 👋
 
-**Fullstack Engineer · Python · Javascript · Industrial Automation**
+**Fullstack ML · Python · Industrial Automation**
 
 ---
 
@@ -10,16 +10,16 @@ I focus on building **production-grade systems** for factories including Machine
 
 ### Interested in:
 
-- Industrial Automation Engineering
+- Industrial Automation
 - ERPs
-- Fullstack Development
-- Distributed Systems and Data Heavy Systems. 
+- Fullstack ML
+- Data Heavy Systems. 
 
-Always building. Always learning.
+Always tinkering. Always learning.
 
 ---
 
-## 🛠 What I Build 
+## 🛠 Tools I Prefer 
 
 ### 🐍 Python Backend with Databases
 - FastAPI  
